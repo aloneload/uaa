@@ -189,5 +189,6 @@ public class UaaConfiguration extends AuthorizationServerConfigurerAdapter imple
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         oauthServer.tokenKeyAccess("permitAll()").checkTokenAccess(
                 "isAuthenticated()");
+        oauthServer.allowFormAuthenticationForClients();
     }
 }
